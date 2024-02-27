@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                mvn 'mvn package'   // Replace 'mvn package' with your build command if different
+                // Use Maven from global tool configuration
+                tool 'Maven'
+                bat 'mvn clean package'
             }
         }
     }
