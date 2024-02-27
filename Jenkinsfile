@@ -8,5 +8,11 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
+        stage('Test') {
+        	steps {
+        		tool 'Maven'
+        		bat 'mvn test'
+        	}
+        }
     }
 }
