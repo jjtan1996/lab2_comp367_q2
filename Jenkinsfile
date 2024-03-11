@@ -44,7 +44,7 @@ pipeline {
                 script {
                     // Push Docker image to Docker Hub
                     docker.withRegistry('', 'github_credentials') {
-                        dockerImage.push()
+                        docker.image('lab2appq2-image:latest').push()
                     }
                 }
             }
