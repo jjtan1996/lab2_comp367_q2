@@ -38,13 +38,6 @@ pipeline {
             }
         }
         
-        stage('Docker Login') {
-            steps {
-                script {
-                    // No need to log in explicitly if Docker Hub credentials are configured in Jenkins
-                }
-            }
-        }
         
         stage('Docker Push') {
             steps {
