@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    docker.build('lab2appq2:latest')
+                    docker.build('jjtan1996/lab2appq2:latest')
                 }
             }
         }
