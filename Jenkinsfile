@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script {
                     // Push Docker image to Docker Hub
-                    docker.withRegistry('', 'dockerhub_id') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dockerhub_id') {
                         docker.image('lab2appq2-image:latest').push()
                     }
                 }
