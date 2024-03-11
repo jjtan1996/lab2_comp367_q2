@@ -33,7 +33,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    docker.build('lab2appq2-image:latest')
+                    docker.build('lab2appq2:latest')
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline {
                 script {
                     // Push Docker image to Docker Hub
                     docker.withRegistry('', 'github_credentials') {
-                        docker.image('lab2appq2-image:latest').push()
+                        docker.image('lab2appq2:latest').push()
                     }
                 }
             }
